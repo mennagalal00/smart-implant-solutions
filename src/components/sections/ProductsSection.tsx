@@ -16,13 +16,12 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
       className="group bg-white rounded-2xl border border-brand-light hover:border-brand-amber/30 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
     >
      
-
-      <div className="mx-4 mb-4 rounded-xl overflow-hidden h-56 relative bg-gradient-to-br from-gray-50 to-gray-100">
+<div className="mb-4 rounded-xl overflow-hidden h-56 relative bg-gradient-to-br from-gray-50 to-gray-100">
   <Image
     src={product.image}
     alt={product.name}
     fill
-    className="object-contain"
+    className="object-cover"
   />
 </div>
 
