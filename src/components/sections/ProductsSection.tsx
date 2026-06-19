@@ -1,18 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { products } from "@/lib/data";
 import type { Product } from "@/types";
 import Image from "next/image";
-
-const originColors: Record<string, string> = {
-  german: "bg-amber-50 text-amber-800 border-amber-200",
-  korean: "bg-blue-50 text-blue-800 border-blue-200",
-  egyptian: "bg-green-50 text-green-700 border-green-200",
-};
-
 
 function ProductCard({ product, index }: { product: Product; index: number }) {
   return (
@@ -23,11 +15,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
       transition={{ duration: 0.5, delay: index * 0.08 }}
       className="group bg-white rounded-2xl border border-brand-light hover:border-brand-amber/30 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
     >
-      <div className="flex items-center justify-between px-5 pt-5 pb-3">
-        <span className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${originColors[product.origin]}`}>
-          {product.originCode} {product.originLabel}
-        </span>
-      </div>
+     
 
       <div className="mx-4 mb-4 rounded-xl overflow-hidden h-56 relative bg-gradient-to-br from-gray-50 to-gray-100">
   <Image
@@ -42,10 +30,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
         <h3 className="text-xl font-black text-brand-dark mb-1">{product.name}</h3>
         <div className="text-sm font-semibold text-brand-amber mb-3">{product.subtitle}</div>
         <p className="text-brand-dark/65 text-sm leading-relaxed mb-5">{product.description}</p>
-        <button className="flex items-center gap-2 text-brand-amber font-semibold text-sm group-hover:gap-3 transition-all duration-200">
-          <ArrowLeft size={16} className="rotate-180" />
-          اعرف المزيد
-        </button>
+        
       </div>
     </motion.div>
   );

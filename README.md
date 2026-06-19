@@ -47,9 +47,8 @@ src/
 │   │   ├── AboutSection.tsx
 │   │   ├── ProductsSection.tsx
 │   │   ├── WhyUsSection.tsx
-│   │   ├── ComparisonSection.tsx
-│   │   ├── TestimonialsSection.tsx
-│   │   └── ContactSection.tsx
+│   │   ├ContactSection.tsx
+│   │     
 │   └── ui/
 │       ├── Button.tsx
 │       ├── SectionLabel.tsx

@@ -1,8 +1,6 @@
 export interface Product {
   id: string;
   origin: "german" | "korean" | "egyptian";
-  originLabel: string;
-  originCode: string;
   design: "standard" | "aggressive";
   name: string;
   subtitle: string;
