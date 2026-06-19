@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-dark: #2C1A0E;
+  --brand-brown: #3D2210;
+  --brand-gold: #B8860B;
+  --brand-amber: #C9A227;
+  --brand-light: #F5EFE6;
+  --brand-cream: #FAF7F2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cairo', 'Noto Sans Arabic', sans-serif;
+  background-color: var(--brand-cream);
+  color: var(--brand-dark);
+  direction: rtl;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--brand-cream); }
+::-webkit-scrollbar-thumb { background: var(--brand-amber); border-radius: 3px; }
+
+/* Section spacing consistency */
+.section-pad {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .section-pad {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
