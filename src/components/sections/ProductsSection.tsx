@@ -13,7 +13,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="group bg-white rounded-2xl border border-brand-light hover:border-brand-amber/30 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+        className="w-full h-full group bg-white rounded-2xl border border-brand-light hover:border-brand-amber/30 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
     >
      
 <div className="mb-4 rounded-xl overflow-hidden h-56 relative bg-gradient-to-br from-gray-50 to-gray-100">
@@ -28,8 +28,9 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
       <div className="px-5 pb-6">
         <h3 className="text-xl font-black text-brand-dark mb-1">{product.name}</h3>
         <div className="text-sm font-semibold text-brand-amber mb-3">{product.subtitle}</div>
-        <p className="text-brand-dark/65 text-sm leading-relaxed mb-5">{product.description}</p>
-        
+<p className="text-brand-dark/65 text-sm leading-relaxed mb-5 min-h-[72px]">
+  {product.description}
+</p>        
       </div>
     </motion.div>
   );
